@@ -1,0 +1,23 @@
+schema: 1
+id: org.fleet.automove
+name: Auto Move
+description: Run label and file actions when torrents finish or change state.
+version: 1.0.0
+api: ">=1.0.0 <2.0.0"
+engines:
+  - rtorrent
+capabilities:
+  - torrents.read
+  - torrents.actions
+  - files.read
+  - events.subscribe
+  - jobs.schedule
+  - storage.read
+  - storage.write
+frontend:
+  type: declarative
+  entry: ui/extension.json
+backend:
+  type: process
+  executable: bin/automove-worker
+  protocol: jsonrpc-2

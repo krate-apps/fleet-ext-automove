@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "extensionId": "org.fleet.automove",
+  "pages": [
+    {
+      "id": "rules",
+      "title": "Auto Move Rules",
+      "route": "/ext/org.fleet.automove/rules"
+    }
+  ],
+  "forms": [
+    {
+      "id": "rule-editor",
+      "title": "Rule",
+      "fields": [
+        {
+          "name": "label",
+          "label": "Label",
+          "kind": "text",
+          "required": true,
+          "placeholder": "movies"
+        },
+        {
+          "name": "pattern",
+          "label": "Pattern",
+          "kind": "text",
+          "required": true
+        },
+        {
+          "name": "enabled",
+          "label": "Enabled",
+          "kind": "boolean",
+          "help": "Master switch for this worker."
+        }
+      ],
+      "description": "Adjust Rule — essentials first, extras under More options."
+    }
+  ]
+}
